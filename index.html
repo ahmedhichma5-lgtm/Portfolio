@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celine Hichma - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Celine </a></div>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbox"><i class="ri-menu-line"></i></label>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#parcours">parcours</a></li>
+          <li><a href="#projet">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <main>
+    <section class="section" id="home">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">Bienvenue sur mon portfolio</p>
+          <h1 class="title">Je m'appelle <span> Gayout Celine Hichma <br>Etudiante en</span> Génie Logiciel  <br>et Administration Réseau</h1>
+          <p class="description">
+           Venue dans les îles Comores pour poursuivre mes études d'informatique ici au Sénégal<br>
+            Curieuse et motivée, je découvre les bases du développement logiciel et de la gestion de réseaux.<br>
+            J'apprends à coder (HTML, CSS et d'autres). Mes projets :<br>
+            1. Administrateur réseau : gestion de réseaux d'entreprise, sécurité, VPN, etc.<br>
+            2. Développeur d'outils réseau : créer des outils pour monitorer, sécuriser ou automatiser des tâches réseau.
+          </p>
+          <div class="action__btns">
+            <a href="#projet" class="btn">Voir mes projets</a>
+          </div>
+        </div>
+        <div class="image">
+          <img src="/Examen/images/profil.jpeg" alt="Profil de Celine">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about" id="about">
+      <h2>À propos de moi</h2>
+      <p>Étudiante passionnée par le développement logiciel et la gestion de réseaux. Curieuse, motivée et désireuse d’apprendre toujours plus.</p>
+
+      <!-- Compétences -->
+      <div class="skills">
+        <div class="skill">
+          <span>HTML</span>
+          <div class="skill-bar"><div class="skill-bar-inner" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>CSS</span>
+          <div class="skill-bar"><div class="skill-bar-inner" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>Flexbox / Grid</span>
+          <div class="skill-bar"><div class="skill-bar-inner" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>Réseaux</span>
+          <div class="skill-bar"><div class="skill-bar-inner" style="width: 75%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>JavaScript de base</span>
+          <div class="skill-bar"><div class="skill-bar-inner" style="width: 60%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>Outils Dev</span>
+          <div class="skill-bar"><div class="skill-bar-inner" style="width: 70%;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESUME / TIMELINE SECTION ===== -->
+    <section class="parcours" id="parcours">
+      <h2>Parcours & Formation</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="date">2025</span>
+          <h3>Bac</h3>
+          <p>Obtention du Baccalauréat scientifique aux Comores.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="date">2025</span>
+          <h3>Inscription Université</h3>
+          <p>Début des études supérieures en informatique au Sénégal.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="date">2025-2026 </span>
+          <h3>Licence 1</h3>
+          <p>Actuellement en 1ère année de Génie Logiciel - Administration Réseaux en cours...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO SECTION ===== -->
+    <section class="projet" id="projet">
+      <h2>Mes Projets</h2>
+      <div class="portfolio-grid">
+        <!-- Projet 1 -->
+        <div class="portfolio-card">
+          <img src="./images/restaurant.png" alt="restaurant">
+          <div class="portfolio-card-content">
+            <h3>Page HTML & CSS</h3>
+            <p>Création d'une page web responsive avec HTML et CSS.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <a href="/07-Application/index.html" class="btn">Voir le projet</a>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="portfolio-card">
+          <img src="./images/stade.png" alt="stade">
+          <div class="portfolio-card-content">
+            <h3>Formulaire interactif</h3>
+            <p>Développement d'un formulaire HTML/CSS avec validation basique.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Flexbox</span>
+          </div>
+          <a href="/10-application/index.html" class="btn">Voir le projet</a>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="portfolio-card">
+          <img src="./images/universite.png" alt="universite">
+          <div class="portfolio-card-content">
+            <h3>Landing Page</h3>
+            <p>Création d'une landing page attractive avec responsive design.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Grid</span>
+            </div>
+            <a href="../08-Application/universite.html" class="btn">Voir le projet</a>
+          </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="portfolio-card">
+          <img src="./images/police.png" alt="Police">
+          <div class="portfolio-card-content">
+            <h3>Mini site personnel</h3>
+            <p>Présentation de mes compétences et projets personnels.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Responsive</span>
+            </div>
+           <a href="../13-Application/index.html" class="btn">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact">
+      <h2>Contactez-moi</h2>
+      <form>
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Sujet</label>
+        <select id="subject" name="subject">
+          <option>Demande d'information</option>
+          <option>Collaboration</option>
+          <option>Autre</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+      
+      <div class="contact-info">
+        <h3>Mes coordonnees</h3>
+        <div class="contact-link">
+          <a href="mailto:ahmedhichma5@gmail.com" target="_blank">
+            <img src="./images/mail.jpg" alt="gmail" width="70">
+          </a>
+          <a href="https://github.com/ahmedhichma5-lgtm" target="_blank">
+            <img src="./images/github.jpg" alt="github" width="70">
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Celine Hichma -- 2026</p>
+    <a href="#home">Retour en haut</a>
+  </footer>
+
+</body>
+</html>

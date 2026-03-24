@@ -1,0 +1,345 @@
+/* 1. VARIABLES ET RESET */
+:root {
+  --primary-color: #6366f1;    /* Violet moderne */
+  --accent-color: #f59e0b;     /* Orange pour l'accent */
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --bg-light: #f9fafb;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Pense à l'importer dans le HTML si besoin */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* 2. NAVIGATION (Sticky + Menu Hamburger) */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+#check, .checkbox {
+  display: none; /* Caché sur desktop */
+}
+
+/* 3. HERO SECTION */
+#home {
+  padding: 80px 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  min-height: 80vh;
+}
+
+.content h1 span {
+  color: var(--primary-color);
+}
+
+.title {
+  font-size: 3rem;
+  margin: 1rem 0;
+  animation: fadeInDown 1s ease;
+}
+
+.image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Forme organique */
+  object-fit: cover;
+  box-shadow: 20px 20px 60px #bebebe;
+  border: 5px solid var(--primary-color);
+}
+
+.action__btns button {
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+
+.action__btns .me {
+  background: var(--primary-color);
+  color: white;
+}
+
+.action__btns .me:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* 4. ABOUT & SKILLS (Barres de progression) */
+section {
+  padding: 100px 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: var(--primary-color);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.skill-bar {
+  background: #e5e7eb;
+  height: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.skill-bar-inner {
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* 5. TIMELINE (Pseudo-éléments obligatoires) */
+.timeline {
+  position: relative;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 30px;
+  margin-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -38px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: var(--white);
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+/* 6. PORTFOLIO GRID (Cards) */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-card {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-card-content {
+  padding: 1.5rem;
+}
+
+.tag {
+  background: #eef2ff;
+  color: var(--primary-color);
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+/* 7. FORMULAIRE DE CONTACT */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+form input:focus {
+  border-color: var(--primary-color);
+}
+
+form button {
+  width: 100%;
+  background: var(--primary-color);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+/*je veux que que contact-info soit alignee a droite et a cote du formulaire*/
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  text-align: right;
+  margin-top: 20px;
+}
+
+
+
+/* 8. ANIMATIONS & RESPONSIVE */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 40px;
+  }
+  
+  .title { font-size: 2rem; }
+  
+  .image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* Menu Hamburger */
+  .checkbox {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  nav ul {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background: var(--white);
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+  }
+  
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--text-dark);
+  color: white;
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
